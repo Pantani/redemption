@@ -11,14 +11,12 @@ import (
 	"os"
 )
 
-var cfgFile string
-
 // rootCmd represents the base command when called without any subcommands
 var (
 	Storage *storage.Storage
 	rootCmd = &cobra.Command{
-		Use:   "Market Data",
-		Short: "Sync all market data inside a database and provide an API to read",
+		Use:   "Redemption Backend",
+		Short: "Clean API to generates redeem links and redeem the balances from Trust Wallet.",
 		PersistentPreRun: func(cmd *cobra.Command, args []string) {
 			platform.Init()
 
